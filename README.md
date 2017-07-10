@@ -1,1 +1,1 @@
-## LC Adapter code
+## Proxy to LC API 
