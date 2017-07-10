@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <appender name="STDOUT" class="io.symphonia.lambda.logging.DefaultConsoleAppender">
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %X{AWSRequestId:-NO-REQUEST-ID} %.-6level %logger{5} - %msg%n</pattern>
+        </encoder>
+    </appender>
+	<logger name="com.landry.aws" level="debug"
+		additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
